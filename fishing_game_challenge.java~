@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static final String[] fish = {"Tuna", "Tadpole", "Kraken"};
+    public static final int[] points = {2, 1, 1234812034};
+    public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Type as fast as you can for the next 5 seconds");
+
+	long startTime = System.currentTimeMillis();
+	boolean shouldContinue = true;
+	String input = scanner.nextLine();
+	while (shouldContinue) {
+	double elapsedTime = ((System.currentTimeMillis() - startTime) +0.1)/1000;
+	System.out.format("You typed %d characters in %f seconds%n", input.length(), elapsedTime);
+	double input_score = input.length() / elapsedTime;
+	int total_score = 0;
+	if (input_score > 30) {
+	    total_score += points[2];
+	    System.out.format("You caught a %s for %d points%n", fish[2], points[2]);
+	} else if (input_score > 20) {
+	    total_score += points[0];
+	    System.out.format("You caught a %s for %d points%n", fish[0], points[0]);
+	} else {
+	    total_score += points[1];
+	    System.out.format("You caught a %s for %d points%n", fish[1], points[1]);
+	}
+	System.out.format("You have %d points in total%n", total_score);
+	System.out.println("Continue? [y/n]\n");
+	if (scanner.nextLine() == "y") {
+	    shouldContinue = true;
+	    System.out.println("Hello!\n");
+		} else {
+	    System.out.println(scanner.nextLine());
+	    shouldContinue = false;
+	}
+    }
+    }
+}
+
+    

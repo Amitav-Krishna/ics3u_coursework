@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main() {
+    // Input: Name
+    // Processing: Null
+    // Output: Birthday song
+    // SET name TO user_input
+    // PRINT Happy birthday to you!  \nHappy birthday to you!  \nHappy birthday to
+    // PRINT name
+    // PRINT !  \nHappy birthday to you!
+    // END
+    public static void HappyBirthdaySong () {
+	Scanner scanner = new Scanner(System.in); // Declares a new scanner
+	String name = null; // Variable for the name
+	System.out.println("What is your name?\n"); // Asks user for name
+	name = scanner.nextLine(); // Takes input from user
+
+	System.out.println("Happy birthday to you!  \nHappy birthday to you!  \nHappy birthday to" + name + "!  \nHappy birthday to you!"); // Prints happy birthday song
+    }
+    // Input: Names of provinces, territories, and capitals
+    // Processing: Null
+    // Output: Input
+    // SET provinces TO {}
+    // SET capitals TO {}    
+    // FOR i FROM 0 TO 12
+    // PRINT Please give me the name of the
+    // PRINT (i+1)
+    // PRINT province or territory
+    // SET provinces[i] TO user_input
+    // ENDFOR
+    // FOR j FROM 0 TO 12
+    // PRINT Please give me the name of the capital of
+    // PRINT provinces[j]
+    // SET capitals[j] TO user_input
+    // ENDFOR
+    // PRINT Province/Territory                   Capital
+    // FOR k FROM 0 TO 12
+    // PRINT provinces[k]
+    // PRINT capitals[k]
+    // ENDFOR
+    // END
+}

@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+	Random random = new Random();
+	Scanner scanner = new Scanner(System.in);
+	int numberOfCandidates = 3;
+	boolean continue = true;
+	int[] points = {0, 0, 0};
+	while(continue) {
+	    int randomNumber = random.nextInt();
+	    for (int i = 0; i < numberOfCandidates; i++) {
+		System.out.print("(Player ", i, " Guess the number: ");
+		int guess = sc.nextLine();
+		if (guess == randomNumber) {
+		    points[i] += 1;
+		}
+	    }
+	}
+    }
+}
+		

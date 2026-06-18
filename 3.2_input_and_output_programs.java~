@@ -1,0 +1,19 @@
+public class Main {
+    public main() {
+	roundNumbers();
+    }
+
+    // Input: Null
+    // Processing: Do the stuff
+    // Output: numbers
+    // SET numbers TO {8.5467, 9.6382, 18.5146, 125.496}
+    // DISPLAY numbers[0] WITH field_size = 10, decimal places = 3
+    // DISPLAY numbers[1] WITH field_size = 8, decimal places = 5
+    // DISPLAY numbers[2] WITH field_size = 6, decimal places = 1        
+    // DISPLAY numbers[3] WITH field_size = 3, decimal places = 1
+    // END
+    public static void roundNumbers() {
+	double[4] numbers = {8.5467, 9.6382, 18.5146, 125.496};
+
+	System.out.format("%010.3f%n", numbers[0]);
+    }

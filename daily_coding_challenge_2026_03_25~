@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+	Random random = new Random();
+	Scanner scanner = new Scanner(System.in);
+	int numberOfCandidates = 3;
+	boolean shouldContinue = true;
+	int[] points = {0, 0, 0};
+	while(shouldContinue) {
+	    
+	    int randomNumber = random.nextInt(9);
+	    for (int i = 0; i < numberOfCandidates; i++) {
+		System.out.print("(Player " + (i+1) + ") has " + points[i] + " points" + "\n");
+
+		System.out.print("(Player " + (i+1) + ") Guess the number: ");
+		int guess = Integer.parseInt(scanner.nextLine());
+		if (guess == randomNumber) {
+		    points[i] += 1;
+		}
+
+		if (points[i] > 2) {
+		    shouldContinue = false;
+		    System.out.print("Player " + (i+1) + " has won!\n");
+		    break;
+		}
+	    }
+	}
+    }
+}
+		

@@ -1,0 +1,15 @@
+public class Main	// name of class
+{ // start of class
+  public static void main (String[]args)	//magic line
+  {	// start of main method
+	final double PI = 3.141593; // constant variable for Pi
+	int Age = 8;  // age is set to 8 years old
+	String Name = "Johnny";  // String object set to Johnny 
+        
+	    System.out.format ("%s is %d years old.%n", Name, Age);
+	    System.out.format ("The value of PI is %.3f%n", PI);
+        System.out.format ("PI = %012f%n", PI);
+        System.out.format ("%-10.3f%n", PI);
+
+  }	// end of main method
+}// end of class
